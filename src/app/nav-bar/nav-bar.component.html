@@ -1,0 +1,17 @@
+<p>nav-bar works!</p>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="register"  *ngIf="!this._serviceService.isloged()" >Register</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="login" *ngIf="!this._serviceService.isloged()" >Login</a></li>
+      
+        <li ><a routerLink="add" *ngIf="this._serviceService.isloged()"  >Add</a></li>
+        <li><a routerLink="list" *ngIf="this._serviceService.isloged()" >list</a></li>
+        <li><a routerLink="Weather" *ngIf="this._serviceService.isloged()" >weather</a></li>
+        <li class="active"><a (click)="logout()" *ngIf="this._serviceService.isloged()" >logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  

@@ -1,0 +1,18 @@
+<p>list works!</p>
+        <input type="text" [(ngModel)]="search">
+<table  ng-table="indexTable" class="table">
+  <tr >
+      <td>name</td>
+      <td>email</td>
+      <td>password</td>
+  </tr>
+  <tr *ngFor= "let u of (tab | pipe: search) ;let i=index" >
+      <td>{{u.name}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.password}}</td> 
+      <button type="submit" class="btn btn-primary" (click)='Delete(i)'>Delete</button>
+      <button type="submit" class="btn btn-primary" routerLink="../update/{{i}}" >edite</button>
+  </tr>
+  
+  </table>
+  

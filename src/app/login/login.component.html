@@ -1,0 +1,29 @@
+<p>login works!</p>
+<form [formGroup]="loginForm"  class="form-horizontal"  >
+
+    <div id="legend">
+      <legend class="">login</legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" formControlName="username" name="username" placeholder="" class="input-xlarge">
+  
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" formControlName="password" name="password" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success"(click)="log()" >login</button>
+      </div>
+    </div>
+</form>
